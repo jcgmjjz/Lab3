@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
+  <head>
+   <meta charset="UTF-8">
+   <title>ITMD-361 Summer Lab3</title>
+  </head>
   <body>
     <h1>Volunteer Form</h1>
     <form method="POST" action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" enctype="multipart/form-data">
@@ -23,7 +23,7 @@
         <!-- the post sends a null string for each item on the form except the pull down list (age) -->
         <!-- Since there is no default it sends the first item in the list "Under 18". I think there -->
         <!-- should be a validation warning that no default has been selected. The other option is to -->
-        <!-- add "None" option to the age in order to be consistent with the treatment of other selectable -->
+        <!-- add a "None" option to the age in order to be consistent with the treatment of other selectable -->
         <!-- items. So if you do not make any selections all items send the equivalent of a null -->
         <label for="age" >Age:</label>
         <select id="age" name="age_field">
