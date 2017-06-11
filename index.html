@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+  <body>
+    <h1>Volunteer Form</h1>
+    <form method="POST" action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" enctype="multipart/form-data">
+      <fieldset>
+        <legend><strong>My Info</strong></legend>
+        <p><label>First Name: <input type="text" name="first_name_field"></label></p>
+        <p><label>Last Name: <input type="text" name="last_name_field"></label></p>
+        <p><label>Phone Number: <input type="text" name="phone_field"></label></p>
+        <p><label>Email Address: <input type="text" name="email_field"></label></p>
+        <p>
+          <label>Gender: </label>
+          <label>  Male <input type="radio" name="gender_field" value="Male"></label>
+          <label>Female <input type="radio" name="gender_field" value="Female"></label>
+        </p>
+        
+        <!-- If you press the send button without putting any information in the form -->
+        <!-- the post sends a null string for each item on the form except the pull down list (age) -->
+        <!-- Since there is no default it sends the first item in the list "Under 18". I think there -->
+        <!-- should be a validation warning that no default has been selected. The other option is to -->
+        <!-- add "None" option to the age in order to be consistent with the treatment of other selectable -->
+        <!-- items. So if you do not make any selections all items send the equivalent of a null -->
+        <label for="age" >Age:</label>
+        <select id="age" name="age_field">
+          <option>Under 18</option>
+          <option>18 - 24</option>
+          <option>25 - 34</option>
+          <option>35 - 44</option>
+          <option>45 - 54</option>
+          <option>55 - 64</option>
+          <option>65 and over</option>
+        </select>
+      </fieldset>
+      <p></p>
+      <fieldset>
+        <legend><strong>My Availability</strong></legend>
+        <label><input type="checkbox" name="available_field[]" value="Sunday">Sunday</label><br/>
+        <label><input type="checkbox" name="available_field[]" value="Monday">Monday</label><br/>
+        <label><input type="checkbox" name="available_field[]" value="Tuesday">Tuesday</label><br>
+        <label><input type="checkbox" name="available_field[]" value="Wednesday">Wednesday</label><br/>
+        <label><input type="checkbox" name="available_field[]" value="Thursday">Thursday</label><br/>
+        <label><input type="checkbox" name="available_field[]" value="Friday">Friday</label><br/>
+        <label><input type="checkbox" name="available_field[]" value="Saturday">Saturday</label>
+        <p>
+          <label>Any Comments?:</label>
+        </p>
+          <textarea cols="100" rows="6" name="comments_field" id="the_textarea"></textarea>
+        <p>
+          <input type="hidden" name="hidden_field" value="gzabinski">
+        </p>
+      </fieldset>
+      <p><input type="submit" value="Send Me"></p>
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
